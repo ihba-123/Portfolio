@@ -66,11 +66,11 @@ const Footer = () => {
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
-          <a href="mailto:abhishekbhatta110@gmail.com" className="p-text">abhishekbhatta110@gmail.com</a>
+          <a href="mailto:abhishekbhatta0.programmer@gmail.com" className="p-text" style={{fontSize:"15px", color:"black"}}>abhishekbhatta0.programmer@gmail.com</a>
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
-          <a href="tel:+977 9745345419" className="p-text">+977 9745345419</a>
+          <a href="tel:+977 9745345419" className="p-text" style={{fontSize:"15px", color:"black"}}>+977 9745345419</a>
         </div>
       </div>
 
@@ -79,6 +79,7 @@ const Footer = () => {
           <div className="app__flex">
             <input 
               className="p-text" 
+              style={{fontSize:"15px", color:"black"}}
               type="text" 
               placeholder="Your Name" 
               name="name" 
@@ -89,6 +90,7 @@ const Footer = () => {
           <div className="app__flex">
             <input 
               className="p-text" 
+              style={{fontSize:"15px", color:"black"}}
               type="email" 
               placeholder="Your Email" 
               name="email" 

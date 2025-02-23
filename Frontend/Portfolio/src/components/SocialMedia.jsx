@@ -5,17 +5,17 @@ import { ThemeContext } from '../Context/ThemeContext'
 function SocialMedia() {
   const {darkMode} = useContext(ThemeContext)
   return (
-    <div className={`app__social ${darkMode ? 'dark':'light'}`}>
-      <div>
-        <BsTwitter/>
-      </div>
-      <div>
-        <FaFacebookF/>
-      </div>
-      <div>
+    <a className={`app__social ${darkMode ? 'dark':'light'}`}>
+      <a href='https://x.com/Abhishek8311212' target="_blank" rel="noopener noreferrer"  style={{cursor:"pointer"}}>
+        <BsTwitter />
+      </a>
+      <a href="https://www.facebook.com/abhishek.bhatta.1023" target="_blank" rel="noopener noreferrer" style={{cursor:"pointer"}}>
+        <FaFacebookF />
+      </a>
+      <a href='https://www.instagram.com/abhibhatta1023/' target="_blank" rel="noopener noreferrer"  style={{cursor:"pointer"}}>
         <BsInstagram/>
-      </div>
-    </div>
+      </a>
+    </a>
   )
 }
 

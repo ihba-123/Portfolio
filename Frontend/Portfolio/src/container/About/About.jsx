@@ -10,7 +10,8 @@ const About = ({ darkMode }) => {
 
   useEffect(() => {
     const query = '*[_type == "abouts"]';
-    client.fetch(query)
+    client
+      .fetch(query)
       .then((data) => setAbout(data))
       .catch((err) => console.log(err));
   }, []);
@@ -37,7 +38,7 @@ const About = ({ darkMode }) => {
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
-            <p className="p-text" style={{ color: "gray", fontSize:"15px"}}>
+            <p className="p-text" style={{ color: "gray", fontSize: "15px" }}>
               {about.description}
             </p>
           </motion.div>
@@ -47,5 +48,8 @@ const About = ({ darkMode }) => {
   );
 };
 
-export default AppWrap(MotionWrap(About, "app__about"), "about", "app__about_bg"); 
-
+export default AppWrap(
+  MotionWrap(About, "app__about"),
+  "about",
+  "app__about_bg"
+);
