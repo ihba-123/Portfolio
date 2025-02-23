@@ -9,7 +9,7 @@ const App = () => {
       <Cursor/>
       <Navbar/>
       <Header/>
-      <About/>
+      <About />
       <Works/>
       <Skills/>
       <Testimonial/>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../Context/ThemeContext";
 const NavigationDots = ({ active }) => {
+  const {darkMode , setDarkMode} = useContext(ThemeContext)
   return (
-    <div className="app__navigation">
+    <div className={`app__navigation ${darkMode ? 'dark':'light'}`}>
       {[
         "home",
         "about",

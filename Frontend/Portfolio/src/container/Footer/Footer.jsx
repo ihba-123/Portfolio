@@ -61,7 +61,7 @@ const Footer = () => {
     <>
       <ToastContainer />
       
-      <h2 className="head-text">Chat with me</h2>
+      <h2 className="head-text"style={{color:"gray"}}>Chat with me</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card">

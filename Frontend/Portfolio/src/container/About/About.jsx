@@ -2,9 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./About.scss";
-import {urlFor , client} from '../../client'
+import { urlFor, client } from "../../client";
 import { AppWrap, MotionWrap } from "../../wrapper";
-const About = () => {
+
+const About = ({ darkMode }) => {
   const [about, setAbout] = useState([]);
 
   useEffect(() => {
@@ -15,12 +16,12 @@ const About = () => {
   }, []);
 
   return (
-    <>
+    <div className={`${darkMode ? "dark" : "light"}`}>
       <h2 className="head-text">
-        I know that
+        <span style={{ color: "gray" }}>I know that</span>
         <span> Good Dev </span>
         <br />
-        means
+        <span style={{ color: "gray" }}>means</span>
         <span> Good Business </span>
       </h2>
       <div className="app__profiles">
@@ -36,18 +37,15 @@ const About = () => {
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
-            <p className="p-text" style={{ color: "gray" }}>
+            <p className="p-text" style={{ color: "gray", fontSize:"15px"}}>
               {about.description}
             </p>
           </motion.div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
-export default AppWrap(
-  MotionWrap(About, "app__about"),
-  "about",
-  "app__whitebg"
-);
+export default AppWrap(MotionWrap(About, "app__about"), "about", "app__about_bg"); 
+

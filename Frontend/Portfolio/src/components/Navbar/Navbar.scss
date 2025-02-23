@@ -157,3 +157,57 @@
     display: none;
   }
 }
+
+//toggle
+
+.swap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  color:var(--secondary-color);
+
+}
+
+.swap-rotate {
+  transition: transform 0.3s ease-in-out;
+
+  input:checked ~ .swap-off {
+    display: none;
+  }
+
+  input:not(:checked) ~ .swap-on {
+    display: none;
+  }
+
+  input:checked ~ .swap-on {
+    display: block;
+  }
+
+  input:not(:checked) ~ .swap-off {
+    display: block;
+  }
+}
+
+.theme-controller {
+  display: none; // Hide the checkbox
+  
+}
+
+.swap-off,
+.swap-on {
+  width: 2.5rem;  // Equivalent to Tailwind w-10
+  height: 2.5rem; // Equivalent to Tailwind h-10
+  fill: currentColor;
+  
+}
+
+
+
+.outer_nav{
+  display: none;
+  @media (min-width: 900px) {
+    display: block !important;
+  }
+}

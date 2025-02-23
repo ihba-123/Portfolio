@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect , useContext} from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { client, urlFor } from "../../client"; // Combined imports
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Works.scss";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 
 const Works = () => {
@@ -11,6 +12,7 @@ const Works = () => {
   const [animatedCard, setAnimatedCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
   const [filterWorks, setFilterWorks] = useState([]);
+  const {darkMode} = useContext(ThemeContext)
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -42,7 +44,7 @@ const Works = () => {
     <>
     <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
-      <div className="app__work-filter">
+      <div className={`app__work-filter`}>
         {[
           "All",
           "Web App",
@@ -69,8 +71,8 @@ const Works = () => {
         className="app__work-portfolio"
       >
         {filterWorks.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
-            <div className="app__work-img app__flex">
+          <div className={`app__work-item app__flex ${darkMode?"dark":"light"} key={index}`}>
+            <div className={`app__work-img app__flex`}>
               <img src={urlFor(work.imgUrl)} alt={work.name} />
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
