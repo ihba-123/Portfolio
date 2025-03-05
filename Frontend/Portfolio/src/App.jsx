@@ -3,12 +3,12 @@ import {Navbar}  from './components';
 import {About, Footer, Header, Skills, Testimonial, Works} from './container';
 import './App.scss'
 import FloatingBtn from './Floating icon/FloatingBtn';
-import Cursor from './components/Cursor/Cursor';
+import SplashCursor from './Animation/SplashCursor';
 const App = () => {
   return (
     <div className='app'>
+      <SplashCursor/>
       <FloatingBtn/>
-      <Cursor/>
       <Navbar/>
       <Header/>
       <About />
@@ -16,6 +16,7 @@ const App = () => {
       <Skills/>
       <Testimonial/>
       <Footer/>
+      
     </div>
   )
 }

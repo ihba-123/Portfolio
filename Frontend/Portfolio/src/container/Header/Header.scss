@@ -58,15 +58,16 @@
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
+  color:white;
 
   .badge-cmp,
   .tag-cmp {
     padding: 1rem 2rem;
-    background: var(--white-color);
+    background-color: rgba(27, 28, 43, 0.747);
     border-radius: 15px;
     flex-direction: row;
     width: auto;
-
+    color:white;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   }
 
@@ -109,7 +110,7 @@
     height: 100px;
     border-radius: 50%;
 
-    background: var(--white-color);
+    background-color: rgba(230, 226, 235, 0.623);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 
     img {

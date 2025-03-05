@@ -49,9 +49,8 @@ const Works = () => {
           "All",
           "Web App",
           "React JS",
-          "React Native",
           "Node JS",
-          "Next JS",
+          "Python"
         ].map((item, index) => (
           <div
             key={index}
