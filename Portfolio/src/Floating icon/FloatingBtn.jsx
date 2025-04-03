@@ -5,8 +5,8 @@ import "./Float.scss";
 const FloatingBtn = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Abhishek-Bhatta-CV.pdf"; // Ensure the file is in the `public` folder
-    link.download = "Abhishek-Bhatta-CV.pdf";
+    link.href = "/Abhishek-bhatta-cv.pdf"; // Ensure the file is in the `public` folder
+    link.download = "Abhishek-bhatta-cv.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
