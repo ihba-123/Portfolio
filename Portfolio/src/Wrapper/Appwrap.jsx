@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { NavigationDots, SocialMedia } from "../components";
 import { ThemeContext } from "../Context/ThemeContext"; // Import ThemeContext
 
-const AppWrap = (Component, idName, classNames) =>
+const Appwrap = (Component, idName, classNames) =>
   function HOC(props) { // Accept props properly
     const { darkMode } = useContext(ThemeContext); // ✅ Get darkMode inside the function
 
@@ -21,4 +21,4 @@ const AppWrap = (Component, idName, classNames) =>
     );
   };
 
-export default AppWrap;
+export default Appwrap;

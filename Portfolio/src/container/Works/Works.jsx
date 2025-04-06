@@ -47,10 +47,9 @@ const Works = () => {
       <div className={`app__work-filter`}>
         {[
           "All",
-          "Web App",
-          "React JS",
-          "Node JS",
-          "Python"
+          "React js",
+          "NEXT JS",
+          "MERN"
         ].map((item, index) => (
           <div
             key={index}
